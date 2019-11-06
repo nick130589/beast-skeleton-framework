@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Passed tests",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Infrastructure problems",
+    "matchedStatuses": ["broken", "failed"],
+    "traceRegex": ".*java.net.UnknownHostException:.*"
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*FileNotFoundException.*"
+  },
+  {
+    "name": "Failed tests",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Test defects",
+    "matchedStatuses": ["broken"]
+  },
+  {
+    "name": "Ignored tests",
+    "messageRegex": ".*ignored.*",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Infrastructure problems",
+    "messageRegex": ".*RuntimeException.*",
+    "matchedStatuses":  ["broken", "failed"]
+  },
+  {
+    "name": "Regression",
+    "messageRegex": ".*\\sException:.*",
+    "matchedStatuses":  ["broken", "failed"]
+  }
+]
